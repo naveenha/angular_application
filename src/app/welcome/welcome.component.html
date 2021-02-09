@@ -1,0 +1,19 @@
+<h1>Welcome!</h1>
+<div class="container">
+Welcome <span class="thick">{{name}}</span>. You can manage your Todo's <a routerLink="/todos">here</a> <br /><br />
+</div>
+<div class="container">
+    Click here to see welcome message from Spring boot API <button (click)="getWelcomeMessage()" class="btn btn-success">Get Welcome</button>
+</div>
+<div class="container">
+    Click here to see welcome message with user name from Spring boot API <button (click)="getWelcomeMessageWithParam()" class="btn btn-success">Get Welcome</button>
+</div>
+<br /><br />
+<div class="container" *ngIf="welcomeMessageFromSB">
+    <h6>Your customized message</h6>
+    {{welcomeMessageFromSB}}
+</div>
+<div class="container" *ngIf="errorMessageFromSB">
+    <h2>Error has occured!</h2>
+    {{errorMessageFromSB}}
+</div>
