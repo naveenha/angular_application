@@ -3,7 +3,7 @@ import { Router } from '@angular/router';
 import { TodoDataService } from '../service/data/todo-data.service';
 
 export class Todo {
-  constructor(public id: number, public description: string, public done: boolean, public targetDate: Date) { }
+  constructor(public id: number, public description: string, public isDone: boolean, public targetDate: Date) { }
 }
 
 @Component({
@@ -30,7 +30,7 @@ export class ListTodosComponent implements OnInit {
 
   refreshPage() {
     this.todoService.getAllTodos("user").subscribe(response => {
-      console.log('response')
+      // console.log('response')
       this.todos = response
     })
   }
