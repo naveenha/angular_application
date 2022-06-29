@@ -19,16 +19,16 @@ export class WelcomeComponent implements OnInit {
   }
 
   getWelcomeMessage() {
-    console.log(this.welcomeService.executeHelloWorld())
+    // console.log(this.welcomeService.executeHelloWorld())
     this.welcomeService.executeHelloWorld().subscribe(response => this.handleSuccessResponse(response),
       error => this.handleErrorResponse(error))
-    console.log('last line')
+    // console.log('last line')
   }
 
   getWelcomeMessageWithParam() {
     this.welcomeService.executeHelloWorldWithParam(this.name).subscribe(response => this.handleSuccessResponse(response),
       error => this.handleErrorResponse(error))
-    console.log('last line')
+    // console.log('last line')
   }
 
   handleSuccessResponse(response) {

@@ -5,7 +5,7 @@
         <thead>
             <th>Description</th>
             <th>Target Date</th>
-            <th>Is done?</th>
+            <th>Is it done?</th>
             <th>Update</th>
             <th>Delete</th>
         </thead>
@@ -13,7 +13,7 @@
             <tr *ngFor="let todo of todos">
                 <td>{{todo.description}}</td>
                 <td>{{todo.targetDate | date}}</td>
-                <td>{{todo.done}}</td>
+                <td>{{todo.isDone}}</td>
                 <td><button (click)="updateTodo(todo.id)" class="btn btn-success">Update</button></td>
                 <td><button (click)="deleteTodo(todo.id)" class="btn btn-warning">Delete</button></td>
             </tr>
